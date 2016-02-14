@@ -1,0 +1,11 @@
+<phpunit bootstrap="./vendor/autoload.php">
+    <testsuite name="hkt-expressive-auraviewrenderer Test Suite">
+        <directory>./tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
