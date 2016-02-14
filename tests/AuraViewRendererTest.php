@@ -2,9 +2,9 @@
 /**
  * Hari KT (http://harikt.com/)
  *
- * @see       https://github.com/harikt/zend-expressive-auraviewrenderer for the canonical source repository
+ * @see       https://github.com/harikt/hkt-expressive-auraviewrenderer for the canonical source repository
  * @copyright Copyright (c) 2016 Hari KT (http://harikt.com/)
- * @license   https://github.com/harikt/zend-expressive-auraviewrenderer/blob/master/LICENSE.md MIT License
+ * @license   https://github.com/harikt/hkt-expressive-auraviewrenderer/blob/master/LICENSE.md MIT License
  */
 
 namespace Hkt\Expressive\AuraView;
@@ -26,6 +26,6 @@ class AuraViewRendererTest extends \PHPUnit_Framework_TestCase
 
     public function testNothing()
     {
-        
+
     }
 }
