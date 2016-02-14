@@ -29,6 +29,9 @@ use Zend\Expressive\Router\RouterInterface;
  * <code>
  * 'templates' => [
  *     'layout' => 'name of layout view to use, if any',
+ *     'map'    => [
+ *         // template => filename
+ *     ],
  *     'paths'  => [
  *         // namespace / path pairs
  *         //
@@ -64,6 +67,16 @@ class AuraViewRendererFactory
 
         // Inject renderer
         $view = new AuraViewRenderer($renderer, isset($config['layout']) ? $config['layout'] : null);
+
+        $map = isset($config['map']) ? $config['map'] : [];
+        
+        $viewRegistry = $renderer->getViewRegistry();
+        $layoutRegistry = $renderer->getLayoutRegistry();
+
+        foreach ($map as $template => $filename) {
+            $viewRegistry->set($template, $filename);
+            $layoutRegistry->set($template, $filename);
+        }
 
         // Add template paths
         $allPaths = isset($config['paths']) && is_array($config['paths']) ? $config['paths'] : [];
